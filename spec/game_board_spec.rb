@@ -93,12 +93,12 @@ describe Board do
 		end
 	end
 
-	describe "#drop" do
+	describe "#update" do
 		context "on the first turn the player drops disc in the first column" do
 			before do
 				turn = 1
 				column = 1
-				board.drop(turn,column) 
+				board.update(turn,column) 
 			end
 
 			it "adds an X" do
@@ -110,9 +110,9 @@ describe Board do
 			before do 
 				turn = 1
 				column = 1
-				board.drop(turn,column)
+				board.update(turn,column)
 				turn = 2
-				board.drop(turn,column)
+				board.update(turn,column)
 			end
 
 			it "adds an O on top of X" do

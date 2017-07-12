@@ -14,8 +14,7 @@ class Board
 	end
 
 	def display
-		7.times do |row|
-			row -= 1
+		(0..6).each do |row|
 			puts "|#{@rows[row].join("|")}|"
 		end
 		puts "|=============|"
@@ -67,7 +66,7 @@ class Board
 		true
 	end
 
-	def drop(turn,column)
+	def update(turn,column)
 		if turn % 2 == 0
 			disc = "O"
 		else
